@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Game 
 {
 	
-	static char[] motVersTab(String s) 
+	char[] motVersTab(String s) 
 	{
 		char[] mot = s.toCharArray();
 		return mot;
 	}
 		
-	static void afficher(char[] mot, boolean[] vu) 
+	void afficher(char[] mot, boolean[] vu) 
 	{
 		//parcourir chaque index i des tableaux jusqu'à atteindre la longueur du tableau mot
 		for (int i=0; i<mot.length; i++) 
@@ -31,7 +31,7 @@ public class Game
 		}
 	}
 	
-	static boolean[] metAJour(char[] mot, boolean[] vu, char c) 
+	boolean[] metAJour(char[] mot, boolean[] vu, char c) 
 	{
 		//parcourir chaque index i jusqu'à atteindre la longueur du tableau mot
 		for (int i=0; i<mot.length; i++) 
@@ -48,7 +48,7 @@ public class Game
 		return vu;
 	}
 	
-	static boolean partieFinie(boolean vu[]) 
+	boolean partieFinie(boolean vu[]) 
 	{
 		int i;
 		for (i = 0; i < vu.length; i++) {
@@ -59,7 +59,7 @@ public class Game
 		return true;
 	}
 	
-	static void partie(String mot) 
+	void partie(String mot) 
 	{
 		//création du tableau de booléens de la longueur du tableau mot
 		boolean[] vu = new boolean[motVersTab(mot).length];
@@ -74,17 +74,12 @@ public class Game
 			Scanner inputLetter = new Scanner(System.in);
 			System.out.println("\nEntrez une lettre : ");
 			String userLetter = inputLetter.next();
-			char userChar = userLetter.charAt(0);
+			char c = userLetter.charAt(0);
 			//le tableau de booléens est mis à jour
-			metAJour(motVersTab(mot), vu, userChar);
+			metAJour(motVersTab(mot), vu, c);
 			//on affiche le mot caché
-			afficher(motVersTab(mot), vu);
-			//si partieFinie renvoie true
-			if (partieFinie(vu)) 
-			{
-				//alors on affiche un message et la boucle s'arrête
-				System.out.println("\nLa partie est finie.");
-			}		
+			afficher(motVersTab(mot), vu);					
 		}
+		System.out.println("\nLa partie est finie.");
 	}
 }

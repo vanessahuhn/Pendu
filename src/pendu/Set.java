@@ -1,3 +1,4 @@
+package pendu;
 
 import java.util.*;
 
@@ -15,8 +16,8 @@ public class Set {
     /**
      * 
      */
-    private int remainingTries;
-
+    private int remainingTries = 10;
+    
     /**
      * 
      */
@@ -30,9 +31,7 @@ public class Set {
     /**
      * 
      */
-    public void setPlayerType() {
-        // TODO implement here
-    }
+    
 
     /**
      * 
@@ -53,6 +52,7 @@ public class Set {
      */
     public void inputMysteryWord() {
         // TODO implement here
+    	
     }
 
     /**
@@ -68,20 +68,25 @@ public class Set {
     public void displayEndSetInfos() {
         // TODO implement here
     }
+    
+    public void playSet() {
+    	Player.setPlayerType(remainingTries, Match.getPlayer1(), Match.getPlayer2());
+    }
 
     /**
      * @return
      */
     public int getRemainingTries() {
         // TODO implement here
-        return 0;
+        return remainingTries;
     }
 
     /**
      * @param value
      */
-    public void setRemainingTries(int value) {
+    public void setRemainingTries(int remainingTries) {
         // TODO implement here
+    	this.remainingTries = remainingTries;
     }
 
     /**

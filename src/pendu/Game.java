@@ -1,3 +1,4 @@
+package pendu;
 
 import java.util.*;
 
@@ -89,7 +90,11 @@ public class Game {
     public void lose() {
         // TODO implement here
     }
-
+    
+    
+    public void playGame() {
+    	
+    }
     /**
      * @return
      */

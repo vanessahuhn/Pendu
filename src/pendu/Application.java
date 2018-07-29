@@ -1,15 +1,11 @@
+package pendu;
 
-import java.util.*;
-
-/**
- * 
- */
 public class Application {
 
-    /**
-     * Default constructor
-     */
-    public Application() {
-    }
+    public static void main(String[] args) {
+    	Match match = new Match();
+    	match.playMatch();
+    
+	}
 
 }

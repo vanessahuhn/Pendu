@@ -1,9 +1,5 @@
+package pendu;
 
-import java.util.*;
-
-/**
- * 
- */
 public class Letter {
 
     /**
@@ -61,7 +57,7 @@ public class Letter {
      */
     public char getUserChar() {
         // TODO implement here
-        return "0";
+        return '0';
     }
 
     /**
